@@ -1,0 +1,147 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Montserrat";
+    cursor: url('assets/target.png'), auto;
+}
+
+body {
+    background-image: url(assets/background.jpg);
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+}
+
+.rocks {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-image: url(assets/rocks.png);
+    background-size: 600px;
+    z-index: 3;
+    left: 0px;
+    bottom: -140px;
+    pointer-events: none;
+}
+
+.bunny {
+    position: absolute;
+    width: 110px;
+    height: 220px;
+    left: 0px;
+    bottom: -220px;
+    background-image: url(assets/bunny.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.life {
+    float: right;
+    color: red;
+    margin-top: 30px;
+    margin-right: 30px;
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    z-index: 4;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.game-over,
+.bad-shoot {
+    color: red;
+}
+
+.game-over span {
+    margin-top: 90px;
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game-win {
+    color: #33f033;
+    line-height: 110px;
+}
+
+.game-win h4 {
+    margin-bottom: 0;
+    padding: 0 8px;
+}
+
+.refresh-btn {
+    padding: 10px 15px;
+    border: 6px solid #33f033;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.bad-shoot {
+    line-height: 300px;
+}
+
+.great-shoot {
+    color: #33f033;
+    line-height: 300px;
+}
+
+.hearts-holder {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 200px;
+}
+
+.hearts-holder .heart {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url(assets/heart.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.coins-holder {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 200px;
+}
+
+.coins-holder .coins {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url(assets/money-bag.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.points {
+    font-size: 50px;
+    margin-left: 10px;
+    color: yellow;
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+}
